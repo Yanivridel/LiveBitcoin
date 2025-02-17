@@ -5,6 +5,12 @@
       "username": "yaniv",
       "email": "yaniv@gmail",
       "password": "$2b$10$v3z2y96CqTNjzIrj0bZNxOZpGCrF2La73R1h80YM2OfhCDLfReDw."
+    },
+    {
+      "id": "bc0ca8f5-e4d9-4f92-9722-4d8ce0ec5d68",
+      "username": "Maman",
+      "email": "Maman@gmail",
+      "password": "$2b$10$i4tqM2vwchj9w0xD9z9O..WSMHCTwFSHXKv.4EUSCupxYxdsGWRoS"
     }
   ]
 }

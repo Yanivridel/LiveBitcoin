@@ -77,11 +77,9 @@ router.post("/login", async (req, res) =>  {
         const user = users[0];
     
         const isCorrectPassword = await comparePassword(password,user.password);
-
+        
         if (isCorrectPassword) {
             const jwtSecretKey = process.env.JWT_SECRET_KEY;
-            console.log(JTW_EXPIRATION);
-            
     
             const token = jwt.sign(
             {
@@ -96,14 +94,14 @@ router.post("/login", async (req, res) =>  {
             res.cookie("token", token, {
                 httpOnly: true,
                 secure: false,
-                sameSite: 'lax',
+                sameSite: "none",
                 maxAge: Number(process.env.COOKIE_EXPIRATION),
             });
 
             res.json({ 
                 status: "succuss",
                 message: "Logged in successfully", 
-                token: token,
+                token,
                 user
             });
         } 
